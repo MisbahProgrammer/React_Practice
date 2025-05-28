@@ -47,10 +47,12 @@ function App() {
       <FormHandling/>
       <TwoWayBinding/>
       <div className='flex'>
+        <h2 className='text-center font-semibold text-2xl'>Props</h2>
       <Card image = {Profile1} user = 'Denver' location = 'France'/>
       <Card image = {Profile2} user = 'Marco' location = 'Italy'/>
       </div>
       <div className='flex gap-2 items-center justify-center p-5'>
+        <h2 className='text-center text-2xl font-semibold'>Passing Props on JSON Data</h2>
       {Gig.map(function(elem, idx){
         return <Gigs key={idx} user ={elem.name} Photo ={elem.pic} prof={elem.profession} location = {elem.location}/>
       })}

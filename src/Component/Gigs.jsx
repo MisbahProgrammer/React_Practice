@@ -6,7 +6,7 @@ function Gigs(elem) {
   return (
     <>
     
-    <div className='flex flex-col items-center justify-center gap-1 bg-gray-100 w-70 rounded-2xl'>
+    <div className='flex flex-col items-center justify-center gap-1 bg-gray-100 w-70 rounded-2xl p-5'>
         <img src={elem.Photo} alt="" />
         <h2>{elem.user}</h2>
         <h3>{elem.prof}</h3>
