@@ -6,6 +6,7 @@ import Card from './Component/Card'
 import Profile1 from './assets/profile1.jfif'
 import Profile2 from './assets/profile2.jfif'
 import Gigs from './Component/Gigs'
+import Axios from './Component/Axios'
 
 function App() {
  const Gig = [
@@ -51,12 +52,13 @@ function App() {
       <Card image = {Profile1} user = 'Denver' location = 'France'/>
       <Card image = {Profile2} user = 'Marco' location = 'Italy'/>
       </div>
-      <div className='flex gap-2 items-center justify-center p-5'>
+      <div className='flex gap-2 items-center justify-center p-5 border-b-2'>
         <h2 className='text-center text-2xl font-semibold'>Passing Props on JSON Data</h2>
       {Gig.map(function(elem, idx){
         return <Gigs key={idx} user ={elem.name} Photo ={elem.pic} prof={elem.profession} location = {elem.location}/>
       })}
       </div>
+      <Axios/>
       
       
     </>
