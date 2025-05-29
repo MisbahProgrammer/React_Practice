@@ -7,6 +7,12 @@ import Profile1 from './assets/profile1.jfif'
 import Profile2 from './assets/profile2.jfif'
 import Gigs from './Component/Gigs'
 import Axios from './Component/Axios'
+import Header from './Component/Header'
+import { Route, Routes } from 'react-router-dom'
+import Home from './Pages/Home'
+import Services from './Pages/Services'
+import About from './Pages/About'
+import Contact from './Pages/Contact'
 
 function App() {
  const Gig = [
@@ -45,6 +51,13 @@ function App() {
 
   return (
     <>
+    <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/services' element={<Services/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+      </Routes>
+      <Header/>
       <FormHandling/>
       <TwoWayBinding/>
       <div className='flex'>
@@ -59,6 +72,7 @@ function App() {
       })}
       </div>
       <Axios/>
+      
       
       
     </>
